@@ -8,7 +8,7 @@ model = StableCodec(
     device = torch.device("cuda")
 )
 
-audiopath = "bb.wav"
+audiopath = "bb.mp3"
 model.set_posthoc_bottleneck("1x46656_400bps")
 latents, tokens = model.encode(audiopath, posthoc_bottleneck = True)
 decoded_audio = model.decode(tokens, posthoc_bottleneck = True)
