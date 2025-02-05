@@ -9,7 +9,7 @@ model = StableCodec(
 )
 
 audiopath = "aa.wav"
-model.set_posthoc_bottleneck("2x15625_700bps")
+model.set_posthoc_bottleneck("1x46656_400bps")
 latents, tokens = model.encode(audiopath, posthoc_bottleneck = True)
 decoded_audio = model.decode(tokens, posthoc_bottleneck = True)
 
